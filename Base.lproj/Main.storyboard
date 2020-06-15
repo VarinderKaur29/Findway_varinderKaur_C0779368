@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="phR-zr-6GQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FInd My Way-->
+        <scene sceneID="1tT-Gq-S1I">
+            <objects>
+                <viewController id="4Gb-8z-1Dh" customClass="ViewController" customModule="FindWay_VarinderKaur_C0779368" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2rT-lS-Z6K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xk8-RY-uyg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xk8-RY-uyg" firstAttribute="leading" secondItem="SC0-fi-4b1" secondAttribute="leading" id="0XN-Mz-6iF"/>
+                            <constraint firstItem="SC0-fi-4b1" firstAttribute="bottom" secondItem="Xk8-RY-uyg" secondAttribute="bottom" id="0ak-Fk-rg4"/>
+                            <constraint firstItem="Xk8-RY-uyg" firstAttribute="top" secondItem="SC0-fi-4b1" secondAttribute="top" id="IMT-u5-Nts"/>
+                            <constraint firstItem="SC0-fi-4b1" firstAttribute="trailing" secondItem="Xk8-RY-uyg" secondAttribute="trailing" id="Uut-ct-pSQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SC0-fi-4b1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FInd My Way" id="jau-dM-5Eg">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-navigation-24" id="MNL-Lj-WGp">
+                            <connections>
+                                <action selector="currentLocation:" destination="4Gb-8z-1Dh" id="g93-Ra-o7G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Xk8-RY-uyg" id="CyL-UH-VPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdE-7h-n3Z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J3p-j6-fCh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="phR-zr-6GQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9TF-CV-y5K">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Gb-8z-1Dh" kind="relationship" relationship="rootViewController" id="wvf-Nt-V8i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iI-5G-Vbs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-navigation-24" width="24" height="24"/>
+    </resources>
+</document>
